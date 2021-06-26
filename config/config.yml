@@ -1,0 +1,154 @@
+setup:
+  
+  token: "ODU4NDAwMTE0MDQ5MTU1MDc0.YNdlZw.FmS0fxSFHsKdgeyMWhgUN1NA_gk"
+  serverID: "858430111015108628"
+
+colour: "FF0062"
+prefix: "."
+
+
+serverName: "Vape"
+botName: "Vape"
+footer: "© Vape | Owned by OPTYMZER"
+
+statusMessage: "-help"
+
+inviteSystem: "on"
+
+liveConsoleLog: "on"
+
+commandChannels: []
+bypassCommands: ["gcreate", "gend", "gdelete", "greroll", "add", "remove", "lower", "raise", "close", "reopen",
+                 "delete", "forcedelete", "ticketpanel", "transcript", "voiceticket", "clear", "slowmode", "lockdown", "announce"]
+
+blackList: []
+
+core:
+  fun: "on"
+  moderation: "on"
+  tickets: "on"
+  utilities: "on"
+  giveaways: "on"
+  economy: "on"
+  levels: "on"
+  music: "on"
+
+autoRoles: []
+
+joinLeaveMessage: "off"
+joinLeaveChannel: ""
+
+welcomeMsg: "We hope you enjoy your stay!"
+
+leaveMsg: "They will be missed."
+
+verificationSystem: "off"
+verificationRole: "test"
+verificationChannel: "verify"
+verifyPanelEmoji: "✅"
+
+mutedRole: "Muted"
+
+viewVerifyChannel:   ["Management"]
+talkInVerifyChannel: ["Management"]
+
+viewLogsChannel:  ["Management"]
+
+exemptFromPunishments:   ["Staff", "Management"]
+
+logChannel: "logs"
+suggestionChannel: "suggestions"
+reportChannel: "logs"
+bugChannel: "logs"
+
+ticketSystem: "on"
+ticketCategory: "tickets"
+ticketPanelEmoji: "🎟️"
+maxTicketsPerUser: 2
+
+canSeeTicket:        ["Staff", "Management"]
+canSeeRaisedTicket:  ["Management"]
+canSeeClosedTicket:  ["Management"]
+
+applicationSystem: "on"
+applicationCategory: "application"
+applicationChannel: "logs"
+applicationPosition: "Admin"
+applicationQuestions:  [
+  "Question 1?",
+  "Question 2?",
+  "Question 3?"
+]
+
+canSeeApplication: ["Management"]
+
+giveaways:
+  botsCanWin: false
+  ignoreIfHasPermission: []
+  reaction: "🎉"
+
+economy:
+  currency: "$"
+  workCooldown: 300000
+  
+  jobs: [
+    ["engineer", 0, 400],
+    ["constructor", 0, 400],
+    ["cook", 0, 400],
+    ["technician", 0, 400],
+    ["police", 0, 400],
+    ["doctor", 0, 400]
+  ]
+
+  roleShop: [
+    ["Bronze", 4000],
+    ["Silver", 5500],
+    ["Gold", 7000]
+  ]
+
+levelSystem: "on"
+
+levelChannel: "current"
+
+levelCoolDown: 30000
+levelMaxPoints: 15
+
+social:
+  facebook: ""
+  twitter: ""
+  instagram: ""
+  youtube: ""
+  twitch: ""
+
+online:
+  website: ""
+  forums: ""
+  donate: ""
+
+swearFilter: "off"
+swearWords: ["fuck","shit","piss","dick","fucker","cock","cunt","bitch","whore","arse",
+            "bastard","wanker","bullshit","nigger","slut","choad","chode"]
+
+inviteFilter: "on"
+
+antiSpam: "off"
+antispamMessageLimit: 5
+antispamTimeLimit: 100000
+antiSpamMuteTime: 30000
+
+swearBypass:   ["Management"]
+inviteBypass:  ["Management"]
+
+slap: ["https://media.giphy.com/media/TA9NZjiqCIOTC/giphy.gif",
+      "https://media.giphy.com/media/xT8qB7Sbwskk27Rdy8/giphy.gif",
+      "https://media.giphy.com/media/lX03hULhgCYQ8/giphy.gif",
+      "https://media.giphy.com/media/u8maN0dMhVWPS/giphy.gif",
+      "https://media.giphy.com/media/l41lZEoYn6z1uc2fS/giphy.gif"
+      ]
+    
+hug: ["https://media.giphy.com/media/EvYHHSntaIl5m/giphy.gif",
+      "https://media.giphy.com/media/QbkL9WuorOlgI/giphy.gif",
+      "https://media.giphy.com/media/yidUzriaAGJbsxt58k/giphy.gif",
+      "https://media.giphy.com/media/roVZxEfHaVCWA/giphy.gif",
+      "https://media.giphy.com/media/vTtibSrt4dlIc/giphy.gif"
+     ]

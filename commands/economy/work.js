@@ -1,91 +1,69 @@
-const db = require("quick.db");
-const ms = require("parse-ms");
-module.exports = {
- meta: {
-     name: "work",
-     aliases: ["wrk"],
-     description: "Radite određeni posao za novac",
-     hasArgs: false,
-     category: "economy",
-     devOnly: false,
-     perms: {
-        require: false
-     },
- },
-    pokreni: async (scope, message, args, cfg, Discord) => {
-    let randomJobs = [
-    "trgovac",
-    "frizer",
-    "gradjevinac",
-    "čistač",
-    "nastavnik",
-    "bolničar",
-    "policajac",
-    "vatrogasac",
-    "taksista",
-    "veterinar",
-    "blagajnik",
-    "prevodilac",
-    "arhitekta",
-    "farmaceut",
-    "novinar",
-    "analiticar",
-    "psiholog",
-    "doktor",
-    "producent",
-    "fotograf",
-    "mesar",
-    "vodoinstalater",
-    "konobar",
-    "batler",
-    "špijun",
-    "kaskader",
-    "elektroinstalater",
-    "računovođa",
-    "kuvar"
-    ];
+﻿const db = require('quick.db')
+const Discord = require('discord.js')
 
-let poso = randomJobs[Math.floor(Math.random() * randomJobs.length)]
+const talkedRecently = new Set();
 
-    let user = message.author;
-    let author = await db.fetch(`work_${message.guild.id}_${user.id}`)
-    let timeout = 500000;
+exports.run = async (client, message, args,) => {
+    message.delete()
 
-    if (author !== null && timeout - (Date.now() - author) > 0) {
-      let time = ms(timeout - (Date.now() - author));
-      message.channel.send(
-      new Discord.MessageEmbed()
-        .setAuthor(`${scope.user.username} - Work`, scope.user.displayAvatarURL())
-        .setDescription(`${cfg.emojis.no} Već ste radili, pričekajte još **${time.seconds}** sekundi`)
-        .setFooter(`${message.author.username}#${message.author.discriminator}`, message.author.avatarURL)
-        .setColor(cfg.colors.no)
-        .setTimestamp()
-      );
-    } else {
-      let bal = db.fetch(`money_${message.guild.id}_${user.id}`);
-      if (bal === null) bal = 0;
-      let bank = await db.fetch(`bank_${message.guild.id}_${user.id}`);
-      if (bank === null) bank = 0;
-      let allBalance = parseInt(bal) + parseInt(bank);
-      let amount = Math.floor(Math.random() * 300) + 1;
+    let temp = `${args[0]}`
+    let type = temp.toLowerCase()
 
-  
- let transakcije = db.fetch(`transakcije_${message.guild.id}_${message.author.id}`) || [];
-    transakcije.unshift(`[**+ $${amount}**] Dobijeno radeći kao **${poso}**`); //nope
-    db.set(`transakcije_${message.guild.id}_${message.author.id}`, transakcije);
+    var types = []
+    client.config.economy.jobs.forEach(element => types.push(element[0].toLowerCase()))
 
-      message.channel.send(
-      new Discord.MessageEmbed()
-        .setAuthor(`${scope.user.username} - Work`, scope.user.displayAvatarURL())
-        .setDescription(`${cfg.emojis.yes} Radili ste kao **${poso}** i zaradili ste **$${amount}**! `)
-        .setFooter(`${message.author.username}#${message.author.discriminator}`, message.author.avatarURL)
-        .setColor(cfg.colors.yes)
-        .setTimestamp()
-      );
-      db.add(`money_${message.guild.id}_${message.author.id}`, amount);
-      db.set(`work_${message.guild.id}_${user.id}`, Date.now())
+    async function work(job, min, max){
+        let amount = Math.floor(Math.random() * (max - min + 1) + min); 
+        let Embed = new Discord.MessageEmbed()
+            .setAuthor(`${message.author.tag}`, message.author.displayAvatarURL()) 
+            .setDescription(client.l.eco.work.worked.replace('%USER%', message.author).replace('%JOB%', job).replace('%CURRENCY%', client.config.economy.currency).replace('%AMOUNT%', amount))
+            .setColor(client.config.colour)
+            .setFooter(client.l.eco.footer.replace('%SERVERNAME%', client.config.serverName).replace('%USER%', message.author.username))
+        message.channel.send(Embed)
+        db.add(`money_${message.guild.id}_${message.author.id}`, amount)
+    }
 
+    if ((args[0] == null) || !(types.includes(type)) ) {
+        let Embed = new Discord.MessageEmbed()
+            .setTitle(`⚒️ ${client.l.eco.work.helpTitle}`)
+            .setDescription(`${client.l.gen.err.usage} \`${client.config.prefix}${client.command} ${client.l.eco.work.usage}\` \n ${client.l.eco.work.helpMessage}`)
+            .setColor(client.config.colour)
+            .setFooter(client.l.eco.footer.replace('%SERVERNAME%', client.config.serverName).replace('%USER%', message.author.username))
+        
+        client.config.economy.jobs.forEach(element => {
+            Embed.addField(`${element[0]}`, `\n${client.config.economy.currency}${element[1]} - ${client.config.economy.currency}${element[2]}`, true)
+        })
 
-    };
-  }
+        const fail = await message.channel.send(Embed)
+
+        setTimeout(() => {
+            fail.delete()
+          }, 6000)
+
+        return
+    }        
+    
+    if (talkedRecently.has(message.author.id)) {
+        let Embed = new Discord.MessageEmbed()
+            .setTitle(client.l.gen.err.coolDownTitle)
+            .setDescription(`${client.l.gen.err.coolDownMessage} **${client.config.economy.workCooldown/60000} mins**.`)
+            .setColor(client.config.colour)
+            .setFooter(client.l.eco.footer.replace('%SERVERNAME%', client.config.serverName).replace('%USER%', message.author.username))
+        const fail = await message.channel.send(Embed);setTimeout(() => {fail.delete()}, 6000);return
+    } 
+    else {
+        client.config.economy.jobs.forEach(element => {
+            if(element[0] == type){
+                work(element[0], element[1], element[2])
+            }
+        })
+
+        talkedRecently.add(message.author.id)
+        setTimeout(() => {talkedRecently.delete(message.author.id)},client.config.economy.workCooldown)
+
+    }
+
 }
+
+// © Zeltux Discord Bot | Do Not Copy
+

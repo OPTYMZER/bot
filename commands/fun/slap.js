@@ -1,50 +1,21 @@
-module.exports = {
- meta: {
-     name: "slap",
-     aliases: ["osamari"],
-     usage: "[osoba]",
-     description: "Udarite šamar željenom korisniku",
-     hasArgs: false,
-     category: "fun",
-     devOnly: false,
-     perms: {
-        require: false
-     },
- },
-    pokreni: async (scope, message, args, cfg, discord) => {
-      
-      let h = Math.floor(Math.random() * 15)
-      let gif = `https://scopebot.xyz/scope-api/assets/gifs/Slap/${h}.gif`
-      let peder = message.mentions.users.first();
+const Discord = require("discord.js");
 
-      if (!peder) {
-        return message.channel.send(
-          new discord.MessageEmbed()
-          .setAuthor(`${scope.user.username} - Slap`, scope.user.avatarURL())
-          .setColor(cfg.colors.no)
-          .setDescription(`${cfg.emojis.no} Ne možete da ošamariš vazduh.`)
-          .setFooter(message.author.username, message.author.avatarURL()) // ocu testam ovo menjaj ot slobodno kasnije
-          .setTimestamp()
-          );
-      } else if (peder == message.author) {
-        return message.channel.send(
-          new discord.MessageEmbed()
-          .setAuthor(`${scope.user.username} - Slap`, scope.user.avatarURL())
-          .setColor(cfg.emojis.no)
-          .setDescription(`${cfg.emojis.no} Ne mozete ošamariti sami sebe.`)
-          .setFooter(message.author.username, message.author.avatarURL())
-          .setTimestamp()
-          );
-      } else {
-        if (gif == `https://scopebot.xyz/scope-api/assets/gifs/Slap/0.gif`) gif = "https://scopebot.xyz/scope-api/assets/gifs/Slap/1.gif"
-        return message.channel.send(
-          new discord.MessageEmbed()
-          .setDescription(`${message.author} je ošamario/la ${peder}`)
-          .setColor(cfg.colors.main)
-          .setImage(gif)
-          .setFooter(`W-waa... Why?`)
-          );
-      };
-      
-    }
+exports.run = async (client, message, args) => {
+    message.delete()
+
+    var user = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
+    if(!user) return client.missingArguments(client.command, client.l.fun.slap.usage)
+
+    var gif = client.config.slap[Math.floor(Math.random()*client.config.slap.length)]
+
+    let slapEmbed = new Discord.MessageEmbed()
+        .setDescription(client.l.fun.slap.slapped.replace('%SENDER%', message.author).replace('%RECIVER%', user))
+        .setImage(gif)
+        .setColor(client.config.colour)
+        .setFooter(client.l.fun.footer.replace('%SERVERNAME%', client.config.serverName).replace('%USER%', message.author.username))  
+
+    message.channel.send(slapEmbed)
+
 }
+
+// © Zeltux Discord Bot | Do Not Copy

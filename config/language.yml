@@ -1,0 +1,693 @@
+
+
+# Welcome to the messages file.
+# Here you can set any messages or emoji you want the bot to use.
+
+## Zeltux Tip! - Use CTRL+F to search this file for commands!
+
+##########################################
+#                                        #
+#               General                  #
+#                                        #
+##########################################
+
+gen:
+  
+  # Error Messages #
+  err:
+    # Cool Down
+    coolDownTitle: "🚫 Molimo sačekajte"
+    coolDownMessage: "Ovu naredbu možete koristiti samo jednom"
+    # Usage
+    usage: "Korišćenje -"
+    # Missing Args
+    missingArgs: "Pogrešan unos!"
+    # Missing Perms
+    missingPerms: "🚫 Nemate permisije!"
+    roleTooLow: "Moja uloga je ispod uloge po kojoj želite djelovati. Pomakni moju ulogu više da to koristim."
+    # No Perms
+    deniedAccess: "Nemate dozvolu za ovu komandu!"
+    permissionsFooter: "%SERVERNAME% Permissions ➤ Komanda pokrenuta od %USER%"
+
+  # Logs #
+  logs:
+    emoji: "🗒"
+    user: "**User** -"
+    time: "**Time** -"
+    channel: "**Channel** -"
+    staffMember: "**Staff Member** -"
+    reason: "**Reason** -"
+    message: "**Message** -"
+    added: "**Added** -"
+    removed: "**Removed** -"
+    ticket: "**Ticket** -"
+    voiceTicket: "**Voice Ticket** -"
+    poll: "**Poll** -"
+    amount: "**Amount** -"
+    sentBy: "**Sent By** -"
+    reportedBy: "**Reported By** -"
+    role: "**Role** -"
+    bug: "**Bug** -"
+    suggestion: "**Suggestion** -"
+
+
+##########################################
+#                                        #
+#               Economy                  #
+#                                        #
+##########################################
+
+eco:
+
+  # Settings #
+  footer: "%SERVERNAME% Economy ➤ Komanda pokrenuta od %USER%"
+
+  # Messages #
+  balance:
+    wallet: "Novčanik:"
+    bank: "Banka:"
+  buy:
+    usage: "<rank>"
+    brought: "✅ %USER% brought the %ROLE% role for %CURRENCY%%COST%"
+    notEnough: "🚫 Trebam vam minimum %CURRENCY%%COST% da kupite ovo."
+    noRole: "🚫 Ne postoji role %ROLE% na ovom serveru! Kontaktirajte Admine!"
+  deposit:
+    usage: "<amount>"
+    deposited: "✅ %USER% je ostavio %CURRENCY%%AMOUNT% u njegovu banku."
+    notEnough: "🚫 Nemaš dovoljno novca da ostaviš toliko u banku!"
+    numbersOnly: "🚫 Ne možete ostaviti ništa drugo osim brojeva!"
+    noNegatives: "🚫 Ne možeze ostaviti negativan broj!"
+  shop:
+    shop: "Rank Prodavnica"
+  top:
+    message: "Balance Top"
+  withdraw:
+    usage: "<amount>"
+    withdrawn: "✅ %USER% je uzeo %CURRENCY%%AMOUNT% iz njegove banke."
+    notEnough: "🚫 U svojoj banci nemate dovoljno novca da podignete taj iznos."
+    numbersOnly: "🚫 Ne možete povući ništa osim broja!"
+    noNegatives: "🚫 Ne možete podići negativan iznos!"
+  work:
+    usage: "<jobType>"
+    worked: "✅ %USER% je radio kao %JOB% i plaćen je %CURRENCY%%AMOUNT%."
+    helpTitle: "Work command help"
+    helpMessage: "Navedite posao koji morate obaviti! Možete birati između sljedećeg. (Max Pay - Min Pay)"
+
+
+##########################################
+#                                        #
+#             Fun & Games                #
+#                                        #
+##########################################
+
+fun:
+
+  # Settings # 
+  footer: "%SERVERNAME% Fun & Games ➤ Komanda pokrenuta od %USER%"
+
+  # Messages #
+  flip:
+    options:
+            ["Glava",
+             "Ruke"]
+    flip: "🔅 %USER%, Ti si dobio **%RESULT%**"
+  hug:
+    usage: "<user>"
+    hugged: "🤗 **%SENDER% je zagrlio %RECIVER%**"
+  meme:
+    thread: "Pokreni preko google"
+    info: "👍 %UPVOTES% 👎 %DOWNVOTES% 💬 %COMMENTS%"
+  numbergen:
+    generating: "Generiram broj..."
+    number: "🔢 Nasumičan brj je... **%NUMBER%**!"
+  poll:
+    usage: "<topic>"
+    pollTitle: "📊 Anketa"
+    poll: "%POLL%"
+    log: "Poll"
+  rate:
+    usage: "<item>"
+    rate: "⭐ %ITEM% dobija ocjenu **%RATING%** od mene!"
+  rps:
+    options: ["kamen", 
+              "papir", 
+              "makaze"]
+    win: "pobjeda"
+    loss: "gubitak"
+    draw: "jednako"
+    title: "Kamen - Papir - Makaze"
+    message: "Izaberi opciju ispod:"
+    result: "Rezultat je:"
+    you: "Ti si izabrao:"
+    bot: "Bot je izabrao:"
+    tooSlow: "Pre sporo!"
+  slap:
+    usage: "<user>"
+    slapped: "**👏 %SENDER% je ošamario %RECIVER%**"
+  xmas:
+    days: "🎅 %DAYS% dana je ostalo do Božića!"
+    
+
+##########################################
+#                                        #
+#                Music                   #
+#                                        #
+##########################################
+
+music:
+
+  # Settings # 
+  footer: "%SERVERNAME% Music ➤ Komanda pokrenuta od %USER%"
+
+  # Messages #
+
+  leave: 
+    notConnected: "🚫 Niste u istom kanalu sa botom!"
+    botNotConnected: "🚫 Bot trenutno nije povezan na bilo koji kanal!"
+    leavingChannel: "👋 Napuštanje govornog kanala..."
+  pause:
+    noMusic: "🚫 Trenutno ne svira muzika!"
+    notConnected: "🚫 Niste u istom kanalu sa botom!"
+    alreadyPaused: "🚫 Muzika je već pauzirana!"
+    paused: "🛑 Pauzirana %SONG%"
+  play:
+    usage: "<song>"
+    connectToVC: "🚫 Molim vas povežite se u voice kanal."
+    addedSong: "🎵 Pjesma dodana u red."
+    songName: "Naziv pjesme:"
+    nowPlayingTitle: "🎵 Sada ide"
+    requestedBy: "Zatraženo od:"
+    nowPlaying: "Sada ide:"
+  queue:
+    noMusic: "🚫 Trenutno ne svira muzika!"
+    queue: "🎹 Muzički red"
+    requestedBy: "Zatraženo od:"
+    nowPlaying: "Sada ide:"
+  resume:
+    noMusic: "🚫 Trenutno ne svira muzika!"
+    notConnected: "🚫 Niste u istom kanalu sa botom!"
+    notPaused: "🚫 Muzika nije pauzirana!"
+    resumed: "🎵 Nastavljamo %SONG%"
+  search:
+    search: "🌐 Rezultati pretrage"
+    number: "Odaberite broj između"
+  skip:
+    noQueue: "🚫 U redu za čekanje nema ničega na što bih mogao preskočiti!"
+    noMusic: "🚫 Trenutno ne svira muzika!"
+    notConnected: "🚫 Niste u istom kanalu sa botom!"
+    alreadyVoted: "🚫 Već ste glasali! (%VOTES%/%REQUIRED%)"
+    skipped: "▶️ Preskočio sam ovu pjesmu!"
+    voted: "✅ Glasali ste za preskakanje ove pjesme! (%VOTES%/%REQUIRED%)"
+  volume:
+    noMusic: "🚫 Trenutno ne svira muzika!"
+    notConnected: "🚫 Niste u istom kanalu sa botom!"
+    selectANumber: "🚫 Unesite broj između 0-200"
+    volume: "🔊 Podesite jačinu zvuka %SONG% na %VOLUME%."
+
+
+##########################################
+#                                        #
+#              Giveaways                 #
+#                                        #
+##########################################
+
+giveaways:
+
+  # Settings # 
+  footer: "%SERVERNAME% Giveaways ➤ Komanda pokrenuta od %USER%"
+  err: "🚫 Error!"
+
+  # Messages #
+  gcreate:
+    usage: "<time> <winners amount> <prize>"
+    create: "@everyone\n\n🎉🎉 **GIVEAWAY** 🎉🎉"
+    ended: "@everyone\n\n🎉🎉 **GIVEAWAY ZAVRŠEN** 🎉🎉"
+    participate: "Reaguj sa %EMOJI% da bi učestvovao!"
+    time: "Vremena ostalo: **%DURATION%**"
+    winner: "Čestitamo, %WINNERS%! Osvojili ste **%PRIZE%**!"
+    noWinner: "Giveaway otkazan, nema dovoljno učesnika."
+    winners: "winner(s)"
+    endsAt: "End at"
+  gdelete:
+    usage: "<msgID>"
+    deleted: "✅ Uspješno, Giveaway izbrisan!"
+  gend:
+    usage: "<msgID>"
+    ended: "✅ Uspješno, Giveaway završen!"
+  greroll:
+    usage: "<msgID>"
+    rerolled: "✅ Uspješno, Giveaway rerollovan!"
+
+
+##########################################
+#                                        #
+#                Levels                  #
+#                                        #
+##########################################
+
+levels:
+
+  # Settings # 
+  footer: "%SERVERNAME% Leveling ➤ Komanda pokrenuta od %USER%"
+
+  # Messages #
+  leaderboard:
+    leaderboard: "Leaderboard"
+    topten: "10 najboljih!"
+    level: "Level"
+    points: "poena"
+  level:
+    levelinfo: "Level info za"
+    curentlevel: "Trenutni level"
+    totalpoints: "Ukupno poena"
+
+
+##########################################
+#                                        #
+#               Tickets                  #
+#                                        #
+##########################################
+
+tick:
+
+  # Settings # 
+  footer: "%SERVERNAME% Support ➤ Komanda pokrenuta od %USER%"
+  onlyInTicketChannel: "🚫 Možete koristiti ovu komandu samo u tiket kanalu!"
+  onlyInClosedTicketChannel: "🚫 Možete koristiti ovu komandu samo u zavorenom tiket kanalu!"
+
+  # Messages #
+  add:
+    usage: "<user>"
+    added: "👋 %USER% je dodan u ticket."
+    log: "Ticket user dodan."
+  close:
+    whichTicket: "Koji ticket želite zatvoriti?"
+    voice: "🔊 - Vaš voice ticket."
+    both: "🎟️ - Vaš voice & chat ticket."
+    closed: "⛔ **Ovaj ticket je zatvoren!**"
+    voiceTicketClose: "Vaš voice ticket je zatvoren!"
+    managementView: "Ticket je zatvoren, ali je zadržana samo pod nadzorom uprave!"
+    delete: "**Da izbrišete ovaj ticket koristite %DELETE%**"
+    log: "Zatvorite ticket"
+    dm:
+      closed: "🗒 %SERVERNAME% Ticket zatvoren"
+      message: "Hvala što ste se obratili našem timu za podršku, nadamo se da je vaš problem riješen."
+      transcript: "Ispod je kopija transkripta s kanala."
+  delete:
+    areYouSure: "**⚠ Jeste li sigurni da želite izbrisati ovaj ticket?**"
+    willBeDeleted: "Kanal će biti izbrisan."
+    react: "**Reagujte sa ✅ da potvrdite vaše brisanje!**"
+    voidTime: "Vaš zahtjev će biti poništen za 20 sekundi."
+    notDeleted: "⛔ Ticket nije izbrisan!"
+    failed: "⛔ Brisanje ticketa nije uspjelo jer na vrijeme nije data potvrda."
+    log: "Izbriši ticket"
+  forceDelete:
+    log: "Naglo izbriši ticket"
+  lower:
+    lowered: "📉 Ovaj ticket je spušten."
+  new:
+    usage: "<reason>"
+    created: "✅ %USER%, vaš ticket je napravljen."
+    location: "Lokacija - %LOCATION%"
+    support: "🦺 %SERVERNAME% Support"
+    messageLine1: "Hvala vam što ste kreirali ticket!"
+    messageLine2: "Član našeg tima za podršku uskoro će biti s vama."
+    messageLine3: "Dok čekate, molimo vas da detaljno objasnite svoj problem."
+    limit: "⛔ %USER%, reagirali ste na maksimalnu količinu ticketa!"
+    reason: "**Razlog -**"
+    log: "Otvoren ticket"
+  notice: 
+    title: "👋 Hej! I dalje trebate pomoć?"
+    message: "Molimo vas da nas informirate o svom problemu kako bismo vam mogli pomoći."
+    close: "Ako vam više nije potrebna pomoć, zatvorite ticket sa %CLOSE%"
+    noResponse: "Ako nema odgovora u roku od **24 sata**, ticket će biti zatvoren od strane staffa."
+  raise:
+    raised: "📈 Ovaj ticket je ponovo otvoren."
+  remove:
+    usage: "<user>"
+    removed: "👋 %USER% je maket sa ticketa."
+    log: "Ticket user izbrisan"
+  reopen:
+    error: "Error!"
+    errorMessage: "Ovaj ticket ne može biti otvoren ponovo."
+  ticketpanel:
+    create: "Napravite ticket"
+    desc: "Ćao :) Trebate pomoć?"
+    react: "Reagujte ispod sa %EMOJI% da otvorite ticket."
+  voiceTicket:
+    created: "✅ Vaš voice ticket je napravljen."
+    location: "Lokacija - %LOCATION%"
+    log: "Otvoren voice ticket"
+
+
+##########################################
+#                                        #
+#             Moderation                 #
+#                                        #
+##########################################
+
+moderation:
+
+  # Settings #
+  footer: "%SERVERNAME% Moderation ➤ Komanda pokrenuta od %USER%"
+  cantPunish: "🚫 Ne možete kazniti ovog korisnika!"
+
+  # Messages #
+  ban:
+    usage: "<user> <reason>"
+    banned: "😮 Korisnik je banovan! 😮"
+    dm: "**%SERVERNAME%** - 😮 Banovani ste! 😮"
+    log: "Ban"
+  clear:
+    usage: "<amount> [user]"
+    limitations: "Broj mora biti ispod 100!"
+    cleared: "♻ Izbrisano %AMOUNT% poruka."
+    log: "Clear"
+  kick:
+    usage: "<user> <reason>"
+    kicked: "👢 Korisnik je kickovan! 👢"
+    dm: "**%SERVERNAME%** - 👢 Kickovani ste! 👢"
+    log: "Kick" 
+  lockdown:
+    usage: "<time h/m/s>"
+    lifted: "✅ Lockdown uspješan."
+    locked: "🔒 Ovaj kanal je zaključan na %TIME%."
+  mute:
+    usage: "<user> <reason>"
+    muted: "🤐 Korisnik je mjutiran! 🤐"
+    dm: "**%SERVERNAME%** - 🤐 Mjutirani ste! 🤐"
+    log: "Mute"
+  report:
+    usage: "<user> <reason>"
+    reported: "🗒 Korisnik je reportovan! 🗒"
+    report: "🗒 Report"
+    reportedBy: "**Reportovan od** -"
+    log: "Report"
+  say:
+    usage: "<message>"
+    log: "Say"
+  shout:
+    usage: "<message>"
+    log: "Shout"
+  slowmode:
+    usage: "<vrijeme u sekundama/off>"
+    off: "🐌 Slowmode je isključen!"
+    set: "🐌 Slowmode je podešen na %TIME% sekundi."
+    log: "Slowmode"
+  speak:
+    usage: "<message>"
+    log: "Speak"
+  tempMute:
+    usage: "<user> <time> <reason>"
+    tempMuted: "🤐 Korisnik je privremeno mjutiran! 🤐"
+    time: "**Vrijeme** -"
+    dm:
+      tempMuted: "**%SERVERNAME%** - 🤐 Privremeno ste mjutirani! 🤐"
+      unMuted: "**%SERVERNAME%** - 🔊 Unmjutirani ste! 🔊"
+    logs:
+      tempMute: "Temp-Mute"
+      unMute: "Un-Temp-Mute"
+  unban: 
+    usage: "<id>"
+    unbanned: "😮 Korisnik je unbanovan! 😮"
+    dm: "**%SERVERNAME%** - 😮 Unbanovani ste! 😮"
+    logs: "Un-Ban"
+  unmute:
+    usage: "<user>"
+    unmuted: "🔊 Korisnik je unmjutaniran! 🔊"
+    dm: "**%SERVERNAME%** - 🔊 Unmjutirani ste! 🔊"
+    log: "Un-Mute"
+  warn:
+    usage: "<user> <reason>"
+    warned: "📢 Korisnik je opomenut! 📢"
+    dm: " 📢 Opomenuti ste! 📢"
+    log: "Warn"
+
+      
+##########################################
+#                                        #
+#              Utilities                 #
+#                                        #
+##########################################
+
+utilities:
+  
+  # Settings #
+  footer: "%SERVERNAME% Utilities ➤ Komanda pokrenuta od %USER%"
+
+  # Messages #
+  addrole:
+    usage: "<user> <role>"
+    added: "✅ Dodat role."
+    log: "Add Role"
+  announce:
+    usage: "<message>"
+    log: "Announcement"
+  apply:
+    application: "%USER%'ova prijava"
+    position: "Za poziciju %POSITION%'a"
+    split: "This application is split into %TOTALPARTS% parts. This is part %PART%."
+    started: "%USER% je pokrenuo prijavu u kanalu %CHANNEL%"
+    position1: "**Pozicija** - %POSITION%"
+    answerAll: "Molim vas odgovorite na **%TOTALQUESTIONS%** pitanja ispod."
+    cancel: "Da otkažete vašu prijavu, kucajte **stop**."
+    question: "Pitanje"
+    cancelled: "Vaša prijava je otkazana i nije poslana u %SERVERNAME%"
+    tryAgain: "Da pokušate ponovo, kucajte %COMMAND% u %SERVERNAME%."
+    thanks: "✅ Hvala vam što se prijavljujete u %SERVERNAME%."
+    deleted: "Ovaj kanal će biti uskoro izbrisan ali vaša prijava će biti poslana!"
+  bugreport:
+    usage: "<bug>"
+    sent: "✅ Bug report poslat!"
+    bugReport: "🐛 Bug Report"
+    reportedBy: "Reportovan od"
+    log: "Bug Report"
+  channelinfo:
+    type: "Tip"
+    createdAt: "Napravljen"
+    ID: "ID"
+    topic: "Tema"
+    NSFW: "NSFW"
+    category: "Kategorija"
+  donate:
+    donate: "💰 Doniraj nam!"
+    msg: "You can"
+    link: "donate here"
+    noDonationPage: "Nemamo stranicu za doniranje još!"
+  help:
+    help: "%SERVERNAME% Help"
+    react: "Reagujte ispod da izaberete jednu opciju."
+    reactions:
+      economy: "Ekonomija"
+      fun: "Igre & Zezancija"
+      giveaways: "Giveaways"
+      levels: "Levels"
+      moderation: "Moderacija"
+      music: "Muzika"
+      tickets: "Tickets"
+      utilities: "Utilities"
+  hexcolour:
+    usage: "hexcode"
+    capitals: "Ne zaboravite koristiti velika slova."
+    colour: "Boja"
+    name: "IME"
+    hex: "HEX"
+    rgb: "RGB"
+  invites:
+    inviteInfo: "💰 Invites informacije za %USER%."
+    net: "🔢 Invites"
+    joins: "⬆️ Joins"
+    leaves: "⬇️ Leaves"
+  latency:
+    checking: "Provjeravamo bota..."
+    issue: "Ako ovo traje duže od 5 sekundi, postoji problem s vašim hostom."
+    latency: "%BOTNAME% Informacije"
+    latencyValue: "Ping je %LATENCY%ms"
+    apiLatencyValue: "API Ping je %APILATENCY%ms"
+  links:
+    links: "📎 **%SERVERNAME% Korisni linkovi**"
+    website: "Website"
+    forums: "Forums"
+    donate: "Donate"
+    noLinks: "Nemamo još bilo kakve linkove!"
+  lmgtfy:
+    usage: "<question>"
+    lmgtfy: "LMGTFY"
+  ping:
+    pong: "🏓 Pong!"
+  pwdgen:
+    pwdgen: "Password Generator"
+    password: "Lozinka"
+    length: "Dužina"
+    securityRating: "Ocjena sigurnosti"
+    insecure: "Nesigurna"
+    secure: "Sigurna"
+    verySecure: "Vrlo sigurna"
+    note: "Opomena - Vaše lozinke nikada nisu pohranjene na našoj strani!"
+    dm:
+      failed: "🚫 Greška!"
+      failTitle: "Ne mogu te DM"
+      failMsg: "Popravite to promjenom postavki privatnosti za ovaj server kako biste omogućili direktne poruke!"
+  removerole:
+    usage: "<user> <role>"
+    removed: "✅ Obrisan role!"
+    log: "Remove Role"
+  roleinfo:
+    undetectedRole: "🚫 Ne mogu pronaći role!"
+    colour: "Boja"
+    sameAsEmbed: "(ista kao embed boja)"
+    createdAt: "Napravljena"
+    displayedSeperately: "Prikazuje se zasebno?"
+    ID: "ID"
+    members: "Membera"
+    permissions: "Permisije"
+  serverInfo:
+    name: "Ime"
+    ID: "ID"
+    owner: "Vlasnik"
+    region: "Region"
+    size: "Ukupno | Korisnici | Botovi"
+    verification: "Level verifikacije"
+    channels: "Kanala"
+    roles: "Rolovi"
+    creationDate: "Datum kreiranja"
+    informationAbout: "Informacije o"
+    regions:
+      brazil: "Brazil"
+      eucentral: "Central Europe"
+      singapore: "Singapore"
+      uscentral: "U.S. Central"
+      sydney: "Sydney"
+      useast: "U.S. East"
+      ussouth: "U.S. South"
+      uswest: "U.S. West"
+      euwest: "Western Europe"
+      vipuseast: "VIP U.S. East"
+      london: "London"
+      amsterdam: "Amsterdam"
+      hongkong: "Hong Kong"
+      russia: "Russia"
+      southAfrica: "South Africa"
+  social:
+    socialMedia: "🗯 %SERVERNAME% Social Media"
+    facebook: "Facebook"
+    twitter: "Twitter"
+    instagram: "Instagram"
+    youtube: "YouTube"
+    twitch: "Twitch"
+    none: "Nemamo još bilo kakve društvene mreže!"
+  suggest:
+    usage: "<suggestion>"
+    sent: "✅ Suggestija poslata"
+    new: "🔗 Nova sugestija"
+    log: "Nova sugestija"
+  toascii:
+    usage: "<text>"
+    toascii: "📜 Text -> Ascii"
+    text: "Text"
+    ascii: "Ascii"
+  usercount:
+    usercount: "Broj korisnika"
+    totalMembers: "Ukupno membera"
+    totalHumans: "Ukupno ljudi"
+    totalBots: "Ukupno botova"
+  userinfo:
+    username: "Puno korisničko ime"
+    ID: "ID"
+    nickname: "Nadimak"
+    noNickname: "Nijedan"
+    bot: "Bot"
+    status: "Status"
+    playing: "Igra"
+    notPlaying: "Neigra"
+    roles: "Uloge"
+    noRoles: "Nema uloga"
+    joinedDiscordAt: "Pridružio se discordu"
+    informationAbout: "Informacije o"
+    botList:
+      yes: "Da"
+      no: "Ne"
+    statusList:
+      online: "Online"
+      idle: "Idle"
+      dnd: "Do Not Disturb"
+      offline: "Offline/Invisible"
+  verifypanel:
+    verify: "Verifikuj se"
+    desc: "Verifikuj se da dobiješ role na serveru!"
+    react: "Raaguj ispod sa %EMOJI% da se verifikuješ!"
+  weather:
+    usage: "<location>"
+    invalidLocation: "🚫 Molim vas upišite validnu lokaciju!"
+    weather: "🌞 Vrijeme za %LOCATION%"
+    timezone: "⏰ Vremenskazona"
+    degreeType: "Vrsta stepena"
+    temperature: "🌡Temperatura"
+    feelsLike: "Osjećaj kao"
+    winds: "🌪 Vjetrovi"
+    humidity: "Vlažnost"
+    degrees: "Stupnjevi"
+
+
+##########################################
+#                                        #
+#            Server Events               #
+#                                        #
+##########################################
+
+events: 
+  pins:
+    update: "🗒 Pinovi kanala ažurirani!"
+    changed: "Postavka je promijenjena na ovom kanalu!"
+    checkPins: "Provjerite pinove kanala da biste saznali više!"
+  emoji:
+    add: "🗒 Novi emoji dodan"
+    update: "🗒 Emoji updates"
+    remove: "🗒 Emoji izbrisan"
+    log: "**Emoji** -"
+    newlog: "**Novi emoji** -"
+    oldlog: "**Stari emoji** -"
+  message:
+    delete: "🗒 Poruka izbrisana"
+    update: "🗒 Poruka editovana"
+    msgID: "**ID poruke** -"
+    tooLong: "Greška - Poruka predugačka"
+    oldMsg: "**Stara poruka** -"
+    newMsg: "**Nova poruka** -"
+  role:
+    created: "🗒 Novi role napravljen"
+    deleted: "🗒 Role izbrisan"
+    role: "**Role** -"
+  welcome:
+    welcome: "**Welcome To %SERVERNAME%**"
+    joined: "has joined"
+    username: "Username:"
+    ID: "ID:"
+    totalMembers: "Total Members:"
+    log: "🗒 User Join"
+    inviteCode: "%USER% joined using invite code %CODE% from %CREATOR%."
+    used: "This invite was used %AMOUNT% times since it's creation."
+  leave:
+    leave: "**Thanks for visiting %SERVERNAME%**"
+    left: "has just left!"
+    username: "Username:"
+    ID: "ID:"
+    log: "🗒 User Leave"
+  levels:
+    congratulations: "🎉 Bravo **%USER%**! Na novom ste nivou!"
+    previous: "🔽 Prošli level"
+    new: "⏫ Novi level"
+    total: "🔢 Ukupno bodova"
+  filters:
+    footer: "%SERVERNAME% Filters ➤ Poruka poslata od %USER%"
+    advertise:
+      advertise: "😮 Molimo ne reklamirajte!"
+      log: "🗒 Reklama"
+    swear:
+      swear: "😮 Molimo nemojte psovati!"
+      log: "🗒 Psovka"
+  antispam:
+    footer: "%SERVERNAME% Antispam"
+    muted: "Slanje dupliciranih poruka!"
+    unmuted: "Antispam - Korisink je unmjutiran"
+    
